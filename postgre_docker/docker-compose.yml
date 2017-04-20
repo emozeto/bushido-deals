@@ -1,0 +1,10 @@
+version: '2'
+services:
+  bushido-deals.postgre:
+    image: bushido-deals.postgre
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "9876:5432"
+    restart: always

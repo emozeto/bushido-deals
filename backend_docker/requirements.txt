@@ -1,0 +1,4 @@
+Flask==0.10.1
+pymongo==2.8
+Flask-RESTful==0.3.3
+Flask-SQLAlchemy==2.0

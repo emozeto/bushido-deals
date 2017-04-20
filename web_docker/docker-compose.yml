@@ -1,0 +1,15 @@
+version: '2'
+services:
+  bushido-deals.react:
+    image: bushido-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: sh entrypoint.sh
+    working_dir: /home/node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node
+    extra_hosts:
+      - "dockerhost:$DOCKERHOST"

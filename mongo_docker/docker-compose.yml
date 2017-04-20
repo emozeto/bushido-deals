@@ -1,0 +1,12 @@
+version: '2'
+services:
+  bushido-deals.mongodb:
+    image: bushido-deals.mongodb
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "29017:27017"
+    restart: always

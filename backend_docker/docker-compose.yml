@@ -1,0 +1,13 @@
+version: '2'
+services:
+  bushido-deals.backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9500:5000"
+    volumes:
+      - ./app:/app
+    command: /usr/bin/python /app/app.py
+    extra_hosts:
+      - "dockerhost:$DOCKERHOST"
