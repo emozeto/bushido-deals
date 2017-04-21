@@ -11,5 +11,3 @@ services:
       - 80:3000
     volumes:
       - .:/home/node
-    extra_hosts:
-      - "dockerhost:$DOCKERHOST"
