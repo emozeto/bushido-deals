@@ -9,5 +9,3 @@ services:
     volumes:
       - ./app:/app
     command: /usr/bin/python /app/app.py
-    extra_hosts:
-      - "dockerhost:$DOCKERHOST"

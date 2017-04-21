@@ -12,7 +12,7 @@ class App extends Component {
 
     componentDidMount() {
       var that = this;
-      var url = 'http://192.168.0.21:9500'
+      var url = 'http://dockerhost:9500'
 
       fetch(url)
       .then(function(response) {
