@@ -3,10 +3,11 @@ from flask import jsonify
 from flask_pymongo import PyMongo
 from flask_cors import CORS, cross_origin
 from flask import render_template, request
+import os
 
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'test2'
-app.config['MONGO_URI'] = 'mongodb://dockerhost:29017/test2'
+app.config['MONGO_URI'] = os.environ['MONGO_URI']
 cors = CORS(app)
 mongo = PyMongo(app)
 
