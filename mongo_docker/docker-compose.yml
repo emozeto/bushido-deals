@@ -10,3 +10,5 @@ services:
     ports:
       - "29017:27017"
     restart: always
+    extra_hosts:
+      - "dockerhost:$DOCKERHOST"

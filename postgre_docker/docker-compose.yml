@@ -8,3 +8,5 @@ services:
     ports:
      - "9876:5432"
     restart: always
+    extra_hosts:
+      - "dockerhost:$DOCKERHOST"
